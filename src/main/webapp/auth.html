@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authorisation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                color: #D1E3DD;
+                padding: 10px;
+            }
+            .container {
+                background-color: #586F7C;
+                max-width: 300px;
+                margin:auto;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            .heading {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .homeIcon {
+                text-align:center;
+                padding: 5px 0;
+                color: #586F7C;
+            }
+            input {
+                width: 100%;
+                display: inline-block;
+            }
+            .formField{
+                padding: 10px;
+            }
+            .formField label, .formField input {
+                display: inline;
+            }
+            input[type=submit]{
+                display: block;
+                margin: auto;
+                width: 50%;
+                background-color: white;
+                color: #586F7C;
+                border-radius: 5px;
+                border-color: #586F7C;
+            }
+            p {
+                text-align:center;
+            }
+            .icon {
+                color: #586F7C;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="homeIcon">
+            <a href="index.jsp">
+                <i class="fas fa-home fa-2x icon"></i>
+            </a>
+        </div>
+        <div class="container">
+
+            <h1 class="heading">
+                Authorisation With Servlets
+            </h1>
+            <form action="auth" method="POST">
+                <div class="formField">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="formField">
+                    <label for="password">Password</label>
+                    <input type="text" id ="password" name="password">
+                </div>
+                <div class="formField">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+            <p>Example Credentials: David + password</p>
+        </div>
+
+    </body>
+    <script
+            src="https://kit.fontawesome.com/790277f21c.js"
+            crossorigin="anonymous">
+    </script>
+</html>
