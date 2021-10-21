@@ -58,7 +58,7 @@
             <h1 class="heading">
                 Welcome to my Servlet Assignment
             </h1>
-            <p>Follow the links below to view the pages for my assignment. This project is also available on my <a href="https://https://github.com/DavidMackenzie-Saggezza/ServletAssignment">github.</p>
+            <p>Follow the links below to view the pages for my assignment. This project is also available on my <a href="https://github.com/DavidMackenzie-Saggezza/ServletAssignment">github.</p>
             <ul>
                 <li><a href="./auth.html">Q1: Authorisation</a></li>
                 <li><a href="./fileUpload.jsp">Q4: File Upload</a></li>
