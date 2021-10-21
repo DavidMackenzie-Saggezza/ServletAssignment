@@ -38,11 +38,8 @@ public class FileUploadServlet extends HttpServlet {
             fileNames.add(file.getName());
         }
 
-        req.setAttribute("files", fileNames);
 
 
-
-        fileNames.add(fileName);
         if (req.getParameter("overwrite") != null && Files.exists(Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\" + fileName).toAbsolutePath())) {
             Files.copy(fileContent, Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\" + fileName).toAbsolutePath(), StandardCopyOption.REPLACE_EXISTING);
             req.setAttribute("fileAction", "overwritten");
@@ -55,6 +52,8 @@ public class FileUploadServlet extends HttpServlet {
             fileNames.add(fileName);
             req.setAttribute("fileAction", "written");
         }
+
+        req.setAttribute("files", fileNames);
         RequestDispatcher rd = req.getRequestDispatcher("/fileUpload.jsp");
         rd.forward(req, resp);
     }
