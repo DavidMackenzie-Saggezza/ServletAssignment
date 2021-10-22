@@ -4,57 +4,7 @@
 <html>
     <head>
         <title>File Upload</title>
-        <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            color: #D1E3DD;
-            padding: 10px;
-        }
-        .container {
-            background-color: #586F7C;
-            max-width: 300px;
-            margin: 5px auto;
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .homeIcon {
-            text-align:center;
-            padding: 5px 0;
-            color: #586F7C;
-        }
-        .heading {
-            text-align: center;
-            padding: 10px 0;
-        }
-        .formField{
-            padding: 10px;
-        }
-        input[type=submit]{
-            display: block;
-            margin: auto;
-            width: 50%;
-            background-color: white;
-            color: #586F7C;
-            border-radius: 5px;
-            border-color: #586F7C;
-        }
-        p {
-            text-align:center;
-        }
-        .icon {
-          color: #586F7C;
-        }
-        .files {
-            text-align:center;
-        }
-        .files h2 {
-            padding-bottom: 7px;
-        }
-    </style>
+        <link rel="stylesheet" href="css/site.css">
     </head>
     <body>
         <div class="homeIcon">
@@ -70,9 +20,9 @@
                 <div class="formField">
                     <input type="file" id="file" name="file" required>
                 </div>
-                <div class="formField">
-                    <label for="overwrite">Overwrite:</label>
-                    <input type="checkbox" id ="overwrite" name="overwrite">
+                <div class="formField checkBox">
+                    <label for="overwrite" >Overwrite:</label>
+                    <span><input type="checkbox" id ="overwrite" name="overwrite"></span>
                 </div>
                 <div class="formField">
                     <input type="submit" value="Upload">

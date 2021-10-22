@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 10px;
+    color: #D1E3DD;
+}
+.container {
+    background-color: #586F7C;
+    max-width: 300px;
+    margin:5px auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+#homeContainer {
+    max-width:500px;
+}
+.homeIcon {
+    text-align:center;
+    padding: 5px 0;
+    color: #586F7C;
+}
+.heading {
+    text-align: center;
+    padding: 10px 0;
+}
+ul{
+    text-align:center;
+    margin:auto;
+    list-style:none;
+}
+ul li {
+    padding: 10px;
+}
+ul li:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+a{
+    color:inherit;
+}
+ul li a {
+    text-decoration: none;
+    font-size: 1.3em;
+}
+p {
+    text-align: centre;
+}
+input {
+    width: 100%;
+    display: inline-block;
+}
+.formField{
+    padding: 10px;
+}
+.formField label, .formField input {
+    display: inline;
+}
+input[type=submit]{
+    display: block;
+    margin: auto;
+    width: 50%;
+    background-color: white;
+    color: #586F7C;
+    border-radius: 5px;
+    border-color: #586F7C;
+}
+.files {
+    text-align:center;
+}
+.files h2 {
+    padding-bottom: 7px;
+}
+.checkBox label{
+    float:left;
+}
+.checkBox span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+.checkBox span input {
+    width: auto;
+    text-align:center;
+}

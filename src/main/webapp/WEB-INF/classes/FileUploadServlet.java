@@ -32,14 +32,6 @@ public class FileUploadServlet extends HttpServlet {
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
         InputStream fileContent = filePart.getInputStream();
 
-        List<String> fileNames = new ArrayList<String>();
-        File[] files = new File(Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\").toAbsolutePath().toString()).listFiles();
-        for (File file : files) {
-            fileNames.add(file.getName());
-        }
-
-
-
         if (req.getParameter("overwrite") != null && Files.exists(Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\" + fileName).toAbsolutePath())) {
             Files.copy(fileContent, Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\" + fileName).toAbsolutePath(), StandardCopyOption.REPLACE_EXISTING);
             req.setAttribute("fileAction", "overwritten");
@@ -49,8 +41,14 @@ public class FileUploadServlet extends HttpServlet {
         }
         else {
             Files.copy(fileContent, Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\" + fileName).toAbsolutePath(), StandardCopyOption.REPLACE_EXISTING);
-            fileNames.add(fileName);
             req.setAttribute("fileAction", "written");
+        }
+        fileContent.close();
+
+        List<String> fileNames = new ArrayList<>();
+        File[] files = new File(Paths.get("src\\main\\webapp\\WEB-INF\\Uploads\\").toAbsolutePath().toString()).listFiles();
+        for (File file : files) {
+            fileNames.add(file.getName());
         }
 
         req.setAttribute("files", fileNames);
